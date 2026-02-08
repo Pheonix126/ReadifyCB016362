@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Share your feedback and get answers to common questions" name="description"/>
+    <title>Feedback - Readify</title>
+    <link href="images/fb.png" rel="icon" type="png"/>
+    <link href="manifest.json" rel="manifest"/>
+    <link href="feedback.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <a class="logo" href="index.html">📚 Readify</a>
+          <button aria-label="Toggle menu" class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explorer.html">Book Explorer</a></li>
+            <li><a href="tracker.html">Progress Tracker</a></li>
+            <li><a href="recommender.html">Recommender</a></li>
+            <li><a href="reading-flow.html">Reading Flow</a></li>
+            <li><a class="active" href="feedback.html">Feedback</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="feedback-page">
+      <section class="page-header">
+        <div class="container">
+          <h1>Get in Touch</h1>
+          <p>We'd love to hear from you</p>
+        </div>
+      </section>
+      <section class="feedback-section">
+        <div class="container">
+          <div class="feedback-grid">
+            <section class="feedback-form-card">
+              <h2>Send Us Your Feedback</h2>
+              <form id="feedbackForm" novalidate>
+                <div class="form-group">
+                  <label for="userName">Name *</label>
+                  <input id="userName" placeholder="Your name" required type="text"/>
+                  <span class="error-message" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Email *</label>
+                  <input id="userEmail" placeholder="your.email@example.com" required type="email"/>
+                  <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="feedbackType">Feedback Type *</label>
+                  <select id="feedbackType" required>
+                    <option value="">Select type...</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="compliment">Compliment</option>
+                    <option value="question">Question</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea id="message" placeholder="Tell us what's on your mind..." required rows="6"></textarea>
+                  <span class="error-message" id="messageError"></span>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit Feedback</button>
+              </form>
+              <div class="confirmation-message" id="confirmationMessage"></div>
+            </section>
+            <section class="contact-info-card">
+              <h2>Other Ways to Reach Us</h2>
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <h3>Email</h3>
+                  <p>support@readify.com</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">💬</div>
+                <div>
+                  <h3>Live Chat</h3>
+                  <p>Available Mon–Fri, 9AM–5PM</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">🐦</div>
+                <div>
+                  <h3>Social Media</h3>
+                  <p>@ReadifyApp</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How do I save my reading progress?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Go to Progress Tracker, enter your book details, then click "Save Progress". Your data is stored on your device.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Can I use Readify offline?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes. Readify is a PWA, so after your first visit many features work offline and your saved data stays available.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How does the book recommender work?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>It uses your selected genre and length to pick matching books from the collection. You can save them to your reading list.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Where is my data stored?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Your data is saved in your browser using localStorage. It is not stored on external servers.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>How do I add my own books to the collection?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>The collection is curated, but you can track any book in Progress Tracker and mark it completed in Reading Flow.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>📚 Readify</h3>
+          <p>Your companion for discovering and tracking great reads</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="explorer.html">Book Explorer</a></li>
+            <li><a href="tracker.html">Progress Tracker</a></li>
+            <li><a href="recommender.html">Recommender</a></li>
+            <li><a href="feedback.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <form id="newsletterForm">
+            <input id="newsletterEmail" placeholder="Your email" required type="email"/>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Readify. All rights reserved.</p>
+      </div>
+    </footer>
+    <script defer src="feedback.js"></script>
+  </body>
+</html>

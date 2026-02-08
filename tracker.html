@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Track your reading progress and achieve your goals" name="description"/>
+    <title>Progress Tracker - Readify</title>
+    <link href="images/progress.jpg" rel="icon" type="jpg"/>
+    <link href="manifest.json" rel="manifest"/>
+    <link href="tracker.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">📚 Readify</a>
+        <button aria-label="Toggle menu" class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explorer.html">Book Explorer</a></li>
+          <li><a class="active" href="tracker.html">Progress Tracker</a></li>
+          <li><a href="recommender.html">Recommender</a></li>
+          <li><a href="reading-flow.html">Reading Flow</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="tracker-page">
+      <section class="page-header">
+        <div class="container">
+          <h1>Reading Progress Tracker</h1>
+          <p>Monitor your reading journey and stay motivated</p>
+        </div>
+      </section>
+      <section class="tracker-section">
+        <div class="container">
+          <div class="tracker-grid">
+            <section class="tracker-form-card">
+              <h2>Track Your Book</h2>
+              <form id="progressForm">
+                <div class="form-group">
+                  <label for="bookTitle">Book Title</label>
+                  <input id="bookTitle" placeholder="Enter book title" required type="text"/>
+                </div>
+                <div class="form-group">
+                  <label for="totalPages">Total Pages</label>
+                  <input id="totalPages" min="1" placeholder="e.g., 350" required type="number"/>
+                </div>
+                <div class="form-group">
+                  <label for="pagesRead">Pages Read</label>
+                  <input id="pagesRead" min="0" placeholder="e.g., 120" required type="number"/>
+                </div>
+                <div class="form-group">
+                  <label for="dailyPages">Pages Per Day</label>
+                  <input id="dailyPages" min="1" placeholder="e.g., 20" required type="number"/>
+                </div>
+                <div class="button-row">
+                  <button class="btn btn-primary" type="submit">Calculate Progress</button>
+                  <button class="btn btn-secondary" id="saveProgress" type="button">Save Progress</button>
+                </div>
+              </form>
+            </section>
+            <section class="tracker-results-card" id="resultsCard">
+              <h2>Your Progress</h2>
+              <div class="progress-stats">
+                <div class="stat-item">
+                  <div class="stat-label">Completion</div>
+                  <div class="stat-value" id="completionPercent">0%</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Pages Remaining</div>
+                  <div class="stat-value" id="pagesRemaining">-</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Estimated Days</div>
+                  <div class="stat-value" id="daysRemaining">-</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Finish Date</div>
+                  <div class="stat-value" id="finishDate">-</div>
+                </div>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <section class="saved-books-section">
+            <h2>Saved Reading Progress</h2>
+            <div class="saved-books-grid" id="savedBooksList">
+              <p class="empty-message">No saved books yet. Start tracking your reading!</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>📚 Readify</h3>
+          <p>Your companion for discovering and tracking great reads</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="explorer.html">Book Explorer</a></li>
+            <li><a href="tracker.html">Progress Tracker</a></li>
+            <li><a href="recommender.html">Recommender</a></li>
+            <li><a href="feedback.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <form id="newsletterForm">
+            <input id="newsletterEmail" placeholder="Your email" required type="email"/>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Readify. All rights reserved.</p>
+      </div>
+    </footer>
+    <script defer src="tracker.js"></script>
+  </body>
+</html>

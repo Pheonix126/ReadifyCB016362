@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Explore our vast collection of books across all genres" name="description"/>
+    <title>Book Explorer - Readify</title>
+    <link href="images/book+magnify.jpg" rel="icon" type="jpg"/>
+    <link href="manifest.json" rel="manifest"/>
+    <link href="explorer.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <a class="logo" href="index.html">📚 Readify</a>
+        <button aria-label="Toggle menu" class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="explorer.html">Book Explorer</a></li>
+          <li><a href="tracker.html">Progress Tracker</a></li>
+          <li><a href="recommender.html">Recommender</a></li>
+          <li><a href="reading-flow.html">Reading Flow</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="explorer-page">
+      <section class="page-header">
+        <div class="container">
+          <h1>Book Explorer</h1>
+          <p>Discover your next great read from our curated collection</p>
+        </div>
+      </section>
+      <section class="search-section">
+        <div class="container">
+          <div class="search-controls">
+            <input autocomplete="off" class="search-input" id="searchInput" placeholder="Search by title or author..." type="text"/>
+            <select aria-label="Filter by genre" class="filter-select" id="genreFilter">
+              <option value="All">All Genres</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Sci-Fi">Science Fiction</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Romance">Romance</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+            </select>
+          </div>
+        </div>
+      </section>
+      <section class="books-section">
+        <div class="container">
+          <div class="books-grid" id="booksGrid"></div>
+        </div>
+      </section>
+    </main>
+    <div class="modal" id="bookModal">
+      <div class="modal-content">
+        <button class="close" type="button">×</button>
+        <div class="modal-body">
+          <div class="modal-image">
+            <div class="book-cover-large" id="modalBookCover"></div>
+          </div>
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p class="modal-author" id="modalAuthor"></p>
+            <section class="modal-section">
+              <h3>Synopsis</h3>
+              <p id="modalSynopsis"></p>
+            </section>
+            <section class="modal-section" id="seriesSection">
+              <h3>Series</h3>
+              <ul id="modalSeries"></ul>
+            </section>
+            <section class="modal-section">
+              <h3>Ratings &amp; Reviews</h3>
+              <table class="reviews-table">
+                <thead>
+                  <tr>
+                    <th>Source</th>
+                    <th>Rating</th>
+                    <th>Reviews</th>
+                  </tr>
+                </thead>
+                <tbody id="modalReviews"></tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>📚 Readify</h3>
+          <p>Your companion for discovering and tracking great reads</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="explorer.html">Book Explorer</a></li>
+            <li><a href="tracker.html">Progress Tracker</a></li>
+            <li><a href="recommender.html">Recommender</a></li>
+            <li><a href="feedback.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <form id="newsletterForm">
+            <input id="newsletterEmail" placeholder="Your email" required type="email"/>
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Readify. All rights reserved.</p>
+      </div>
+    </footer>
+    <script defer src="explorer.js"></script>
+  </body>
+</html>
