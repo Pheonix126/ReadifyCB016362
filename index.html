@@ -2,23 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Readify - Your ultimate book recommendation and reading tracking platform" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Readify - Your ultimate book recommendation and reading tracking platform"
+    >
     <title>Readify - Discover Your Next Great Read</title>
-  <link href="images/readify.png" rel="icon" type="image/png">
-    <link href="manifest.json" rel="manifest">
-    <link href="index.css" rel="stylesheet">
+
+    <link rel="icon" href="images/readify.png" type="image/png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="index.css">
   </head>
+
   <body>
     <header>
       <nav class="navbar">
         <div class="nav-container">
           <a class="logo" href="index.html">📚 Readify</a>
-          <button aria-label="Toggle menu" class="hamburger" id="hamburger">
+
+          <button
+            id="hamburger"
+            class="hamburger"
+            type="button"
+            aria-label="Toggle menu"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
+
           <ul class="nav-menu" id="navMenu">
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="explorer.html">Book Explorer</a></li>
@@ -30,32 +42,41 @@
         </div>
       </nav>
     </header>
+
     <main>
       <section class="hero">
         <div class="hero-content">
           <div class="quote-section">
             <div class="quote-container" id="quoteContainer">
-              <blockquote id="rotatingQuote">"A reader lives a thousand lives before he dies. The man who never reads lives only one."</blockquote>
+              <blockquote id="rotatingQuote">
+                "A reader lives a thousand lives before he dies. The man who never reads lives only one."
+              </blockquote>
               <cite id="quoteAuthor">- George R.R. Martin</cite>
             </div>
           </div>
+
           <div class="hero-image">
-            <img id="coverImage" class="book-illustration" src="images/readify.png" alt="Readify illustration" loading="lazy" />
+            <div class="book-illustration"></div>
           </div>
         </div>
       </section>
+
       <section class="author-of-day">
         <div class="container">
           <h2>Author of the Day</h2>
+
           <div class="author-card" id="authorCard">
-          <img
-          id="authorImage"
-          class="author-image"
-          src="images/jk.jpg"
-          alt="Author photo"/>
-  <div class="author-info">
+            <img
+              id="authorImage"
+              class="author-image"
+              src="images/jk.jpg"
+              alt="Author photo"
+            >
+
+            <div class="author-info">
               <h3 id="authorName">Loading...</h3>
               <p id="authorBio">Discovering today's featured author...</p>
+
               <div class="author-books">
                 <h4>Notable Works:</h4>
                 <ul id="authorBooks"></ul>
@@ -64,9 +85,11 @@
           </div>
         </div>
       </section>
+
       <section class="features">
         <div class="container">
           <h2>Explore Readify</h2>
+
           <div class="feature-grid">
             <div class="feature-card">
               <div class="feature-icon">📖</div>
@@ -74,18 +97,21 @@
               <p>Browse our collection of books</p>
               <a class="btn" href="explorer.html">Explore Now</a>
             </div>
+
             <div class="feature-card">
               <div class="feature-icon">📊</div>
               <h3>Track Progress</h3>
               <p>Monitor your reading journey</p>
               <a class="btn" href="tracker.html">Start Tracking</a>
             </div>
+
             <div class="feature-card">
               <div class="feature-icon">🎲</div>
               <h3>Get Recommendations</h3>
               <p>Discover your next favorite book</p>
               <a class="btn" href="recommender.html">Find Books</a>
             </div>
+
             <div class="feature-card">
               <div class="feature-icon">🎵</div>
               <h3>Reading Flow</h3>
@@ -96,12 +122,14 @@
         </div>
       </section>
     </main>
+
     <footer>
       <div class="footer-content">
         <div class="footer-section">
           <h3>📚 Readify</h3>
           <p>Your companion for discovering and tracking great reads</p>
         </div>
+
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
@@ -111,23 +139,27 @@
             <li><a href="feedback.html">Contact Us</a></li>
           </ul>
         </div>
+
         <div class="footer-section">
           <h4>Newsletter</h4>
           <form id="newsletterForm">
-            <input id="newsletterEmail" placeholder="Your email" required type="email"/>
+            <input
+              id="newsletterEmail"
+              type="email"
+              placeholder="Your email"
+              required
+            >
             <button class="btn" type="submit">Subscribe</button>
           </form>
           <p class="newsletter-message" id="newsletterMessage"></p>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2025 Readify. All rights reserved.</p>
       </div>
     </footer>
-    <script defer src="index.js"></script>
+
+    <script src="index.js" defer></script>
   </body>
 </html>
-
-
-
-already existing one
